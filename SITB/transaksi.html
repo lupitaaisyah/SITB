@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kasir</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/kasir.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap.js">
+    <link rel="stylesheet" type="text/css" href="assets/js/jquery.min">
+
+    
+
+</head>
+<body>
+<div id="header">
+			<img class="GAMBAR" src="gambar/logo.jpeg" style="width :100px; height :100px; float: left;">
+				<div id="input"	>
+					<h1 id="page-header" style="text-align:center;margin:10px">SISTEM INFORMASI  TOKO BANGUNAN</h1>
+				</div>
+</div>	
+<div id="wrapper">
+	<div id="admin">
+		<h1 style="text-align : center">Halaman Kasir</h1>
+			<a class="keluar" href="loginke.html"><button type="submit" >Keluar</button></a>
+	</div>
+	<div id="sidebar">
+		<div class="row">
+			<div class="col-md-3 col-md-2 col-md-7">
+				<div id="menu-kiri" style="padding-bottom:250pt;">
+					<br><br>
+					<a href="kasircoba.html"><input type="button" name="beranda" value="Beranda" style="height:70px"></a><br><br>
+					<a href="transaksi.html"><input type="button" name="transaksi" value="Transaksi" style="height:70px"></a><br><br>
+				</div>		
+			</div>
+			<div id="page-wrapper">
+				<div id="page-header" >
+				Selamat datang di halaman Kasir
+				</div>
+
+				<br><br>
+				
+				
+				
+				<div id="tanggal">
+					<label>PILIHAN</label>
+					<form action="proses.php">
+						<input type="radio" name="pembelian" value="Pembelian">Pembelian
+						<input type="radio" name="penjualan" value="Penjualan">Penjualan
+				</form>
+					<br>
+					<input type="button" name="ok" value="OK"><br>
+				</div>
+				<div class="barang">
+				<table style="width:900px;color:black">
+					<tr>
+						<td>Kode Barang</td>
+						<td><input id="kobar" type="text" style="width:80px"><button id="cari">ok</button></td>
+						<td>Nama Pelanggan</td>
+						<td><input type="text" name="pelanggan"></td>
+						<td>Total</td>
+						<td>Rp</td>
+					</tr>
+					<tr>
+						<td>Nama Barang</td>
+						<td><input id="nabar" type="text" name="nama barang"></td>
+						<td>Alamat</td>
+						<td><input type="comment" name="alamat"></td>
+						<td>Tunai</td>
+						<td><input type="text" name="tunai" placeholder="Rp"></td>
+					</tr>
+					<tr>
+						<td>Jumlah</td>
+						<td><input id="jumlah_awal" type="number" name="jumlah" style="width:80px"></td>
+						<td>No Hp</td>
+						<td><input type="text" name="alamat"></td>
+						<td>Kembali	</td>
+						<td>Rp</td>
+					</tr>
+					<tr>
+						<td>Harga</td>
+						<td><input id="harga_awal" type="text" name="harga" style="width:90px" placeholder="Rp"></td>
+						
+					</tr>
+					<tr>
+						<td>Total</td>
+						<td id="total">Rp</td>
+					</tr>
+					<tr>
+						<td><input id="tambah" type="button" name="tambah" value="Tambah"></td>
+						<td><input type="button" name="simpan" value="Simpan & Cetak"></td>
+						<td><input type="button" name="batal" value="Batal"></td>
+					</tr>
+				</table><br>
+				</div>
+				<div class="table-responsive">
+  					<table class="table" border="1" cellpadding="10" cellspacing="0">
+  					<tr>
+							<td>NO</td>
+							<td>Kode barang</td>
+							<td>Nama barang</td>
+							<td>Jumlah</td>
+							<td>Harga satuan</td>
+							<td>Total harga</td>
+							<td>Pilihan</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td id="kode_barang"></td>
+							<td id="nama_barang"></td>
+							<td id="jumlah_hasil"></td>
+							<td id="harga_hasil"></td>
+							<td id="total_hasil"></td>
+							<td>
+								<input type="button" name="edit" value="Edit">
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+  					</table>
+					</div>
+			</div>
+		</div>
+</div>
+</div>
+<script type='text/javascript'>
+
+var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+var date = new Date();
+var day = date.getDate();
+var month = date.getMonth();
+var thisDay = date.getDay(),
+    thisDay = myDays[thisDay];
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+
+
+function hapus(){
+var pilihan = confirm("Apakah anda setuju?");
+if (pilihan == true) {
+	alert('Anda berhasil menghapus data');
+} else {
+
+};
+}
+
+
+document.getElementById("tambah").
+addEventListener("click", tampilkan);
+
+function tampilkan(){
+	var kobar=document.getElementById("kobar").value;
+	document.getElementById("kode_barang").innerHTML=kobar;
+
+	var jumlah_awal=document.getElementById("jumlah_awal").value;
+	document.getElementById("jumlah_hasil").innerHTML=jumlah_awal;
+
+	var harga_awal=document.getElementById("harga_awal").value;
+	document.getElementById("harga_hasil").innerHTML=harga_awal;
+
+	var nabar=document.getElementById("nabar").value;
+	document.getElementById("nama_barang").innerHTML=nabar;
+
+
+}
+
+</script>
+</body>
+</html>

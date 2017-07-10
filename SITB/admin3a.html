@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+    
+
+</head>
+<body>
+<div id="header">
+			<img class="GAMBAR" src="gambar/logo.jpeg" style="width :100px; height :100px; float: left;">
+				<div id="input"	>
+					<h1 id="page-header" style="text-align:center;margin-top:10px">SISTEM INFORMASI  TOKO BANGUNAN</h1>
+				</div>
+</div>	
+<div id="wrapper">
+	<div id="admin">
+		<h1 style="text-align : center">Halaman Admin</h1>
+			<a class="keluar" href="loginke.html"><button type="submit" >Keluar</button></a>
+	</div>
+	<div id="sidebar">
+		<div class="row">
+			<div class="col-md-3 col-md-2 col-md-7">
+				<div id="menu-kiri" style="padding-bottom:250pt;">
+					<br><br>
+					<a href="beranda.html"><input type="button" name="beranda" value="Beranda"></a><br><br>
+					<a href="admin.html"><input type="button" name="data-ucer" value="Olah Data Ucer"></a><br><br>
+					<a href="admin2.html"><input type="button" name="data-barang" value="Data Barang"></a><br><br>
+					<a href="admin3.html"><input type="button" name="data-laporan" value="Data Laporan"></a><br><br>
+				</div>		
+			</div>
+			<div id="page-wrapper">
+				<div id="page-header" >
+				Selamat datang di halaman admin
+				</div>
+				<img height="25 px" src="gambar/profile.png">
+				Laporan
+				<br>
+				<br>
+				<table>
+					<tr>
+						<td>Bulan</td>
+						<td>
+							<select name=”Bulan”>
+								<option value="januari">Januari</option>
+								<option value="febuari">Februari</option>
+								<option value="maret">Maret</option>
+								<option value="april">April</option>
+								<option value="mei">Mei</option>
+								<option value="juni">Juni</option>
+								<option value="juli">Juli</option>
+								<option value="agustus">Agustus</option>
+								<option value="semtember">september</option>
+								<option value="oktober">Oktober</option>
+								<option value="november">November</option>
+								<option value="desember">Desember</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Tahun</td>
+						<td><input type="number" name="tahun" style="width: 100px"></td>
+					</tr>
+					<tr>
+					<td>Pilihan</td>
+					<td><form action="proses.php">
+						<input type="radio" name="jeniskelamin" value="Pembelian">Pembelian
+						<input type="radio" name="jeniskelamin" value="Penjualan">Penjualan
+						</form>
+					</td>
+					</tr>
+					<tr>
+						<td><a href="admin3.html"><input type="button" name="ok" value="OK"></a></td>
+					</tr>
+				</table>
+					
+				
+				<div >
+				<br>Laporan <br>
+				<a href="#">cetak ke exel</a>
+
+					<table class="tabel" border="1" width="500px" style="text-align: center;" >
+						<tr>
+							<td>No Laporan</td>
+							<td>Judul Laporan</td>
+							<td>Tanggal</td>
+							<td>Pilihan</td>
+						</tr>
+						<tr>
+							<td>A111</td>
+							<td>Pengeluaran</td>
+							<td>1/1/2017</td>
+							<td>
+								<input type="button" name="lihat" value="Lihat">
+								<input type="button" name="edit" value="Edit">
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+						<tr>
+							<td>A112</td>
+							<td>Pengeluaran</td>
+							<td>1/2/2017</td>
+							<td>
+								<input type="button" name="lihat" value="Lihat">
+								<input type="button" name="edit" value="Edit">
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<br><br>
+				<a href="tambahlaporan.html"><input type="button" name="tambah" value="Tambah"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	
+function hapus(){
+var pilihan = confirm("Apakah anda setuju?");
+if (pilihan == true) {
+	alert('Anda berhasil menghapus data');
+} else {
+
+};
+}
+</script>
+</body>
+</html>

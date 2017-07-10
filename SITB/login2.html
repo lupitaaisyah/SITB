@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN2</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/login2.css">
+</head>
+<body>
+
+<form>
+  <h1><span>Please</span> LOGIN</h1>
+  <input placeholder="Username" type="text"/>
+  <input placeholder="Password" type="password"/>
+  <label>Sebagai :</label>
+  <select class="form-control">
+    <option value="kasir">Kasir</option>
+    <option value="manager">Manager</option>
+    <option value="logistik">Logistik Gudang</option>
+    <option value="admin">Admin</option>
+    <option value="suplier">Suplier</option>
+  </select> <br> <br>
+  <button type="submit" class="btn">Log in</button>
+  <h6>lupa password?</h6>
+  <div class="social">
+  <button class="tw btn">Twitter</button>
+  <button class="fb btn">Facebook</button>
+  <button class="google fb btn">Google+</button>
+  </div>
+</form>
+
+<footer>
+  <h5>coppyrigth <a target="_blank" href="tbb/toko.html">@TokoBangunan</a></h5>
+</footer>
+<script type="text/javascript">$(document).ready(function(e){
+   $('h6').on('click',function(){
+      $('.social').stop().slideToggle();
+   });
+})
+</script>
+
+</body>
+</html>

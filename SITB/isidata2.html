@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="isidata">
+
+</head>
+<body>
+<div id="header">
+			<img class="GAMBAR" src="gambar/logo.jpeg" style="width :100px; height :100px; float: left;">
+				<div id="input"	>
+					<h1 id="page-header" style="text-align:center;margin-top:10px">SISTEM INFORMASI  TOKO BANGUNAN</h1>
+				</div>
+</div>	
+<div id="wrapper">
+	<div id="admin">
+		<h1 style="text-align : center">Halaman Admin</h1>
+			<a class="keluar" href="loginke.html"><button type="submit" >Keluar</button></a>
+	</div>
+	<div id="sidebar">
+		<div class="row">
+			<div class="col-md-3 col-md-2 col-md-7">
+				<div id="menu-kiri" style="padding-bottom:250pt;">
+					<br><br>
+					<a href="beranda.html"><input type="button" name="beranda" value="Beranda"></a><br><br>
+					<a href="admin.html"><input type="button" name="data-ucer" value="Olah Data Ucer"></a><br><br>
+					<a href="admin2.html"><input type="button" name="data-barang" value="Data Barang"></a><br><br>
+					<a href="admin3.html"><input type="button" name="data-laporan" value="Data Laporan"></a><br><br>
+				</div>		
+			</div>
+			<div id="page-wrapper">
+				<div id="page-header" >
+				Selamat datang di halaman admin
+				</div>
+				<img height="25 px" src="gambar/datapengguna.gif">
+				<a href="admin2.html">Data barang</a>
+				<br><br>
+				<h2>Olah Data Barang</h2>
+			<div class="barang">
+
+				<table class="isi data" cellpadding="10" style="width:900px;color:black">
+					<tr>
+						<td>Kode Barang</td>
+						<td><input id="kodebar" type="text"></td>
+						<td>Kode barang</td>
+						<td> : </td>
+						<td id="kodebar1"></td>
+					</tr>
+					<tr>
+						<td>Nama barang</td>
+						<td><input id="namabar" type="text"></td>
+						<td>Nama barang</td>
+						<td> : </td>
+						<td id="namabar1"></td>
+					</tr>
+					<tr>
+						<td>Satuan</td>
+						<td><select id="satuan"  name=”satuan”>
+							<option value="kg">Kg</option>
+							<option value="M">Meter</option>
+							<option value="Cm">Cm</option>
+							<option value="dam">Dam</option>
+							</select></td>
+						<td>Satuan</td>
+						<td> : </td>
+						<td id="satuan1"></td>
+					</tr>
+					<tr>
+						<td>Harga satuan</td>
+						<td><input id="hargasat" type="text" placeholder="Rp"></td>
+						<td>Harga Sartuan</td>
+						<td> : </td>
+						<td id="hargasat1"></td>
+					</tr>
+					
+				</table>
+				<button id="ok">OK</button>
+			</div>
+			
+			</div>
+<script type="text/javascript">
+	
+document.getElementById("ok").
+addEventListener("click", tampilkan);
+
+function tampilkan(){
+	var kodebar=document.getElementById("kodebar").value;
+	document.getElementById("kodebar1").innerHTML=kodebar;
+
+	var namabar=document.getElementById("namabar").value;
+	document.getElementById("namabar1").innerHTML=namabar;
+
+	var satuan=document.getElementById("satuan").value;
+	document.getElementById("satuan1").innerHTML=satuan;
+
+	var hargasat=document.getElementById("hargasat").value;
+	document.getElementById("hargasat1").innerHTML=hargasat;
+
+}
+
+</script>
+
+</body>
+</html>

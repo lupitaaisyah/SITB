@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="header">
+			<img class="GAMBAR" src="gambar/logo.jpeg" style="width :100px; height :100px; float: left;">
+				<div id="input"	>
+					<h1 id="page-header" style="text-align:center;margin-top:10px">SISTEM INFORMASI  TOKO BANGUNAN</h1>
+				</div>
+</div>	
+<div id="wrapper">
+	<div id="admin">
+		<h1 style="text-align : center">Halaman Admin</h1>
+			<a class="keluar" href="loginke.html"><button type="submit" >Keluar</button></a>
+	</div>
+	<div id="sidebar">
+		<div class="row">
+			<div class="col-md-3 col-md-2 col-md-7">
+				<div id="menu-kiri" style="padding-bottom:250pt;">
+					<br><br>
+					<a href="beranda.html"><input type="button" name="beranda" value="Beranda"></a><br><br>
+					<a href="admin.html"><input type="button" name="data-ucer" value="Olah Data Ucer"></a><br><br>
+					<a href="admin2.html"><input type="button" name="data-barang" value="Data Barang"></a><br><br>
+					<a href="admin3.html"><input type="button" name="data-laporan" value="Data Laporan"></a><br><br>
+				</div>		
+			</div>
+			<div id="page-wrapper">
+				<div id="page-header" >
+				Selamat datang di halaman admin
+				</div>
+				<img height="25 px" src="gambar/laporan.jpeg">
+				<a href="admin2.html">Data Barang</a>
+				<br>
+				<br><br>
+    				<h2>Olah Barang</h2>
+    			<div>
+					<table class="tabel" border="2" width="900px" style="text-align: center;">
+						<tr>
+							<td>No</td>
+							<td>kode barang</td>
+							<td>Nama barang</td>
+							<td>Satuan</td>
+							<td>Harga Satuan</td>
+							<td>pilih</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>A021</td>
+							<td>Kayu</td>
+							<td>M</td>
+							<td>50000/ Balok</td>
+							<td>
+								<input type="button" name="lihat" value="Lihat">
+								<a href="isidata2.html"><input type="button" name="edit" value="Edit"></a>
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>A121</td>
+							<td>Paku</td>
+							<td>M</td>
+							<td>5000/ kg</td>
+							<td>
+								<input type="button" name="lihat" value="Lihat">
+								<a href="isidata2.html"><input type="button" name="edit" value="Edit"></a>
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>A321</td>
+							<td>Gergaji</td>
+							<td>M</td>
+							<td>20000/ Buah</td>
+							<td>
+								<input type="button" name="lihat" value="Lihat">
+								<a href="isidata2.html"><input type="button" name="edit" value="Edit"></a>
+								<input type="button" name="hapus" value="Hapus" onclick="hapus();">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<a href="isidata2.html"><button>Tambah</button></a>
+	
+				</div>
+			</div>
+		</div>
+</div>
+<script type="text/javascript">
+	
+function hapus(){
+var pilihan = confirm("Apakah anda setuju?");
+if (pilihan == true) {
+	alert('Anda berhasil menghapus data');
+} else {
+
+};
+}
+
+</script>
+</body>
+</html>
